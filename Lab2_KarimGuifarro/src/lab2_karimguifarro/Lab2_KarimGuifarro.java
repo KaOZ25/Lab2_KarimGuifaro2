@@ -47,6 +47,7 @@ public class Lab2_KarimGuifarro {
                 }
                 case 3: {
                     Print(Det);
+                    System.out.println("Que dese moedificar:");
                     int mod = KaOz.nextInt();
                     Det.set(mod, d);
                     System.out.println("Nombre:");
@@ -59,7 +60,6 @@ public class Lab2_KarimGuifarro {
                     String añolab = KaOz.next();
                     System.out.println("Nivel:");
                     int nivel = KaOz.nextInt();
-                    System.out.println("Que dese moedificar:");
                 }
                 case 4: {
                     Print(Det);
