@@ -10,7 +10,7 @@ public class Lab2_KarimGuifarro {
 
      public static Scanner KaOz = new Scanner(System.in);
     public static Detective d=new Detective();
-    ArrayList<Detective> Det=new ArrayList();
+   static ArrayList<Detective> Det=new ArrayList();
     public static void main(String[] args) {
         char c = 'k';
         while (c == 'k') {
@@ -38,8 +38,9 @@ public class Lab2_KarimGuifarro {
                     String añolab=KaOz.next();
                     System.out.println("Nivel:");
                     int nivel=KaOz.nextInt();
-                    
+                    Det.add(new Detective(nombre,edad,Nacionalidad,añolab,nivel));
                 }
+                break;
                 case 2:{
                     
                 }
