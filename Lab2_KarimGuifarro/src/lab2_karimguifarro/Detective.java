@@ -70,7 +70,7 @@ public class Detective {
 
     @Override
     public String toString() {
-        return "Detective{" + "nombre=" + nombre + ", edad=" + edad + ", nacionalidad=" + nacionalidad + ", a\u00f1olab=" + añolab + ", nivel=" + nivel + '}';
+        return "Detective{" + "nombre=" + nombre + ", edad=" + edad + ", nacionalidad=" + nacionalidad + ", años laborlares=" + añolab + ", nivel=" + nivel + '}';
     }
 
 }
