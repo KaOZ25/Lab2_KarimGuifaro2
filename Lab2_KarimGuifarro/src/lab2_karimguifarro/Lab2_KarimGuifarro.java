@@ -11,6 +11,8 @@ public class Lab2_KarimGuifarro {
 
     public static Scanner KaOz = new Scanner(System.in);
     public static Detective d = new Detective();
+    public static Casos c=new Casos();
+    static ArrayList<Casos> Cas=new ArrayList();
     static ArrayList<Detective> Det = new ArrayList();
 
     public static void main(String[] args) {
@@ -40,6 +42,9 @@ public class Lab2_KarimGuifarro {
                     String añolab = KaOz.next();
                     System.out.println("Nivel:");
                     int nivel = KaOz.nextInt();
+                     if (nivel>10 || nivel<1) {
+                        nivel=KaOz.nextInt();
+                    }
                     Det.add(new Detective(nombre, edad, Nacionalidad, añolab, nivel));
                 }
                 break;
@@ -47,9 +52,13 @@ public class Lab2_KarimGuifarro {
                 }
                 case 3: {
                     Print(Det);
-                    System.out.println("Que dese moedificar:");
+                    System.out.println("Que desea modificar:");
                     int mod = KaOz.nextInt();
-                    Det.set(mod, d);
+                    if (mod<0 || mod>Det.size()) {
+                        System.out.println("No existe este detective");
+                        Print(Det);
+                        System.out.println("Igrese de nuevo el valor:");
+                    }
                     System.out.println("Nombre:");
                     String nombre = KaOz.next();
                     System.out.println("Edad:");
@@ -60,12 +69,30 @@ public class Lab2_KarimGuifarro {
                     String añolab = KaOz.next();
                     System.out.println("Nivel:");
                     int nivel = KaOz.nextInt();
+                     if (nivel>10 || nivel<1) {
+                        nivel=KaOz.nextInt();
+                    }
+                     Det.get(mod).setNombre(nombre);
+                     Det.get(mod).setEdad(edad);
+                     Det.get(mod).setNacionalidad(Nacionalidad);
+                     Det.get(mod).setAñolab(añolab);
+                     Det.get(mod).setNivel(nivel);
                 }
                 case 4: {
                     Print(Det);
                 }
                 case 5: {
-
+                    System.out.println("Lugar:");
+                    String lugar=KaOz.next();
+                    System.out.println("Descripcion:");
+                    String descripcion=KaOz.next();
+                    System.out.println("Tipo:");
+                    String tipo=KaOz.next();
+                    System.out.println("Detective a cargo:");
+                    String detective=KaOz.next();
+                    System.out.println("Estado:");
+                    String estado=KaOz.next();
+                    Cas.add(new Casos(lugar,descripcion,tipo,detective,estado));
                 }
                 case 6: {
 
