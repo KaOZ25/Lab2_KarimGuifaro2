@@ -49,6 +49,15 @@ public class Lab2_KarimGuifarro {
                 }
                 break;
                 case 2: {
+                    Print(Det);
+                    System.out.println("Que desea modificar:");
+                    int mod = KaOz.nextInt();
+                    if (mod < 0 || mod > Det.size()) {
+                        System.out.println("No existe este detective");
+                        Print(Det);
+                        System.out.println("Igrese de nuevo el valor:");
+                    }
+                    Det.remove(mod);
                 }
                 case 3: {
                     Print(Det);
@@ -91,7 +100,22 @@ public class Lab2_KarimGuifarro {
                     System.out.println("Detective a cargo:");
                     String detective = KaOz.next();
                     System.out.println("Estado:");
-                    String estado = KaOz.next();
+                    System.out.println("1=Pendiente, 2=Resuelto");
+                    int es=KaOz.nextInt();
+                    if (es<0 || es>2) {
+                        System.out.println("Ingrese el valor de nuevo");
+                        es=KaOz.nextInt();
+                    }
+                    String estado="";
+                    switch(es){
+                        case 1:
+                             estado = "pendiente";
+                        
+                        break;
+                        case 2:
+                            estado="resuelto";
+                        
+                    }
                     Cas.add(new Casos(lugar, descripcion, tipo, detective, estado));
                 }
                 case 6: {
@@ -108,11 +132,26 @@ public class Lab2_KarimGuifarro {
                     System.out.println("Descripcion:");
                     String descripcion = KaOz.next();
                     System.out.println("Tipo:");
-                    String tipo = KaOz.next();
+                    String tipo = KaOz.nextLine();
                     System.out.println("Detective a cargo:");
                     String detective = KaOz.next();
                     System.out.println("Estado:");
-                    String estado = KaOz.next();
+                    System.out.println("1=Pendiente, 2=Resuelto");
+                    int es=KaOz.nextInt();
+                    if (es<0 || es>2) {
+                        System.out.println("Ingrese el valor de nuevo");
+                        es=KaOz.nextInt();
+                    }
+                    String estado="";
+                    switch(es){
+                        case 1:
+                             estado = "pendiente";
+                        
+                        break;
+                        case 2:
+                            estado="resuelto";
+                        
+                    }
 
                     Cas.get(mod).setLugar(lugar);
                     Cas.get(mod).setDescripcion(descripcion);
@@ -121,16 +160,21 @@ public class Lab2_KarimGuifarro {
                     Cas.get(mod).setEstado(estado);
                 }
                 case 7: {
-
+                   
+                    Print1(Cas);
                 }
                 case 8: {
-
+                    if (Cas.getEstado) {
+                        
+                    }
                 }
                 case 9: {
-
+                    if (Cas.){
+                        
+                    }
                 }
                 case 10: {
-
+                    c='n';
                 }
             }
         }
