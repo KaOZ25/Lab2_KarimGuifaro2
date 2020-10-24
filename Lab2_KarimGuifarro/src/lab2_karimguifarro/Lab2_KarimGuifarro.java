@@ -59,6 +59,7 @@ public class Lab2_KarimGuifarro {
                     }
                     Det.remove(mod);
                 }
+                break;
                 case 3: {
                     Print(Det);
                     System.out.println("Que desea modificar:");
@@ -87,9 +88,11 @@ public class Lab2_KarimGuifarro {
                     Det.get(mod).setAñolab(añolab);
                     Det.get(mod).setNivel(nivel);
                 }
+                break;
                 case 4: {
                     Print(Det);
                 }
+                break;
                 case 5: {
                     System.out.println("Lugar:");
                     String lugar = KaOz.next();
@@ -118,6 +121,7 @@ public class Lab2_KarimGuifarro {
                     }
                     Cas.add(new Casos(lugar, descripcion, tipo, detective, estado));
                 }
+                break;
                 case 6: {
                     Print1(Det);
                     System.out.println("Que desea modificar:");
@@ -163,16 +167,15 @@ public class Lab2_KarimGuifarro {
                    
                     Print1(Cas);
                 }
+                break;
                 case 8: {
-                    if (Cas.getEstado) {
-                        
-                    }
+                    
                 }
+                break;
                 case 9: {
-                    if (Cas.){
-                        
-                    }
+                    
                 }
+                break;
                 case 10: {
                     c='n';
                 }
